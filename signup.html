@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #151515; /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Text color */
+        }
+        .container {
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* Gradient background */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            width: 350px;
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #ffffff; /* White heading */
+        }
+        label {
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: bold;
+            color: #dddddd; /* Light grey label */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 0.5rem 0 1.5rem;
+            border: none;
+            border-radius: 5px;
+            background: #333; /* Darker input background */
+            color: white; /* Input text color */
+            transition: background-color 0.3s, border 0.3s;
+            font-size: 16px;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: #444; /* Change input background on focus */
+            outline: none;
+            border: 1px solid #007bff; /* Blue border on focus */
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #bbbbbb; /* Light grey footer text */
+        }
+        .footer a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="/signup" method="post">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required placeholder="Enter your email">
+            
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass" required placeholder="Enter your password">
+            
+            <label for="confirm-pass">Confirm Password:</label>
+            <input type="password" name="confirm-pass" id="confirm-pass" required placeholder="Confirm your password">
+            
+            <input type="submit" value="Sign Up">
+        </form>
+        <div class="footer">
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>
